@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EverDyn Energy – Coming Soon</title>
-  <meta name="description" content="EverDyn Energy: rotational, always-on clean energy for a flexible, decarbonised grid.">
+  <meta name="description" content="EverDyn Energy is a deeptech venture developing rotational and thermally-driven power systems for grid resilience and reliable clean energy.">
   <style>
     :root {
-      /* Tweak these to match your exact logo colours */
-      --bg-dark: #020617;        /* deep navy / near-black */
-      --bg-accent: #0f172a;      /* slightly lighter navy */
-      --brand-primary: #22d3ee;  /* bright cyan/teal accent */
-      --brand-secondary: #a3e635;/* lime/green accent */
+      --bg-dark: #020617;
+      --bg-accent: #0f172a;
+      --brand-primary: #22d3ee;
+      --brand-secondary: #a3e635;
       --text-main: #e5e7eb;
       --text-muted: #9ca3af;
       --card-bg: rgba(15, 23, 42, 0.9);
@@ -71,18 +70,18 @@
     .logo-wrap {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       margin-bottom: 24px;
     }
 
     .logo-wrap img {
-      height: 52px;
+      height: 80px;  /* ★ Bigger logo */
       width: auto;
       display: block;
     }
 
     .wordmark {
-      font-size: 1.2rem;
+      font-size: 1.35rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -156,43 +155,26 @@
       align-items: center;
     }
 
-    .primary-btn,
-    .ghost-btn {
+    .primary-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
       padding: 10px 18px;
       border-radius: 999px;
-      border: none;
       cursor: pointer;
       font-size: 0.95rem;
       font-weight: 500;
       text-decoration: none;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
-      white-space: nowrap;
-    }
-
-    .primary-btn {
       background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
       color: #020617;
       box-shadow: 0 10px 24px rgba(34, 211, 238, 0.4);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     }
 
     .primary-btn:hover {
       transform: translateY(-1px);
       box-shadow: 0 14px 32px rgba(34, 211, 238, 0.55);
-    }
-
-    .ghost-btn {
-      background: transparent;
-      color: var(--text-main);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-    }
-
-    .ghost-btn:hover {
-      background: rgba(15, 23, 42, 0.9);
-      border-color: var(--brand-primary);
     }
 
     .chevron {
@@ -223,19 +205,22 @@
       margin-bottom: 10px;
     }
 
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
+    .progress-track {
+      width: 100%;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      overflow: hidden;
+      margin-bottom: 10px;
     }
 
-    .pill {
-      font-size: 0.78rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.5);
+    .progress-bar {
+      height: 100%;
+      width: 36%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary));
+      box-shadow: 0 0 14px rgba(34, 211, 238, 0.8);
     }
 
     .status-row {
@@ -262,22 +247,19 @@
       box-shadow: 0 0 10px rgba(190, 242, 100, 0.9);
     }
 
-    .progress-track {
-      width: 100%;
-      height: 7px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      overflow: hidden;
-      margin-bottom: 10px;
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
     }
 
-    .progress-bar {
-      height: 100%;
-      width: 36%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary));
-      box-shadow: 0 0 14px rgba(34, 211, 238, 0.8);
+    .pill {
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.5);
     }
 
     .tiny-print {
@@ -302,10 +284,12 @@
     }
   </style>
 </head>
+
 <body>
   <main class="shell" aria-label="EverDyn Energy landing">
     <section class="card">
-      <!-- Left: main copy -->
+
+      <!-- LEFT SIDE -->
       <div>
         <div class="logo-wrap">
           <img src="everdyn-logo.png" alt="EverDyn Energy logo">
@@ -314,64 +298,63 @@
 
         <div class="badge">
           <span class="badge-dot"></span>
-          <span>New rotational clean energy</span>
+          <span>Deeptech Clean Energy Venture</span>
         </div>
 
         <h1 class="hero-title">
-          Rotational power.<br>
-          <span class="hero-accent">Always on.</span>
+          Engineering reliable<br>
+          <span class="hero-accent">next-generation clean energy.</span>
         </h1>
 
         <p class="hero-tagline">
-          EverDyn is building hardware that turns motion and thermal gradients into reliable, dispatchable clean energy – helping unlock a flexible, decarbonised grid.
+          EverDyn Energy is a deeptech venture developing rotational and thermally-driven power systems that unlock dependable, always-on clean energy. 
+          Our hardware aims to enhance grid resilience and unlock future flexibility markets.
         </p>
 
         <div class="meta-row">
-          <div class="meta-chip">Prototype experiments in progress</div>
-          <div class="meta-chip">Grid flexibility &amp; resilience</div>
-          <div class="meta-chip">Climate-first engineering</div>
+          <div class="meta-chip">Deeptech hardware venture</div>
+          <div class="meta-chip">Grid resilience & flexibility</div>
+          <div class="meta-chip">Early-stage prototyping underway</div>
         </div>
 
         <div class="cta-row">
           <a class="primary-btn" href="mailto:info@everdyn.energy">
-            Get in touch
+            Contact the team
             <span class="chevron">↗</span>
-          </a>
-          <a class="ghost-btn" href="mailto:info@everdyn.energy?subject=EverDyn%20Energy%20Updates">
-            Join early update list
           </a>
         </div>
       </div>
 
-      <!-- Right: status / teaser -->
+      <!-- RIGHT SIDE -->
       <aside class="right-panel" aria-label="Project status">
-        <div class="right-panel-header">Launch status</div>
+        <div class="right-panel-header">Development Status</div>
 
-        <div class="progress-track" aria-hidden="true">
+        <div class="progress-track">
           <div class="progress-bar"></div>
         </div>
 
         <div class="status-row">
           <div class="status-label">
             <span class="status-dot"></span>
-            <span>Concept &amp; experiment design</span>
+            <span>Prototype cycle 1</span>
           </div>
-          <span>Phase 1 of 3</span>
+          <span>In progress</span>
         </div>
 
         <div class="pill-list">
-          <span class="pill">Rotational thermionic concepts</span>
-          <span class="pill">Waste heat harvesting</span>
+          <span class="pill">Rotational energy systems</span>
+          <span class="pill">Thermal-to-electric conversion</span>
+          <span class="pill">High-reliability power modules</span>
           <span class="pill">Grid-scale flexibility</span>
-          <span class="pill">Low-carbon hardware</span>
         </div>
 
         <p class="tiny-print">
-          Want to collaborate, partner, or stay in the loop?  
-          Drop us a line at
+          We are actively developing and validating our core technologies for commercial deployment.  
+          For partnerships, investment, or technical discussions, contact:  
           <a href="mailto:info@everdyn.energy">info@everdyn.energy</a>.
         </p>
       </aside>
+
     </section>
 
     <footer>
@@ -380,7 +363,7 @@
   </main>
 
   <script>
-    // Set current year in footer
+    // Auto-update year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
